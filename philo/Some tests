@@ -15,3 +15,6 @@
 ./philo 5 800 200 200            	=> Infinite (Test that failed last eval)
 
 ./philo 5 800 200 200 5 | grep "is eating" | awk '{count[$2]++} END {for (id in count) print "Philosopher", id, "ate", count[id], "times."}'
+
+
+sanitizeThreads: CFLAGS += -fsanitize=thread
