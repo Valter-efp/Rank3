@@ -1,17 +1,17 @@
-./philo 1 800 200 200`	=> one death at 800 ms
-./philo 3 500 200 400`	=> one death at 500 ms
-./philo 4 310 200 100`	=> one death at 310 ms
-./philo 4 214748364732 200 200` 	=> Invalid Arg
-./philo 5 -500 200 200` 	=> Invalid Arg
-./philo 4 0 200 200` 	=> Invalid Arg
-./philo 4 500 200 1.2` 	=> Invalid Arg
-./philo 4 410 200 200`	=> infinite
-./philo 4 200 210 200`	=> one death at 200 ms
-./philo 4 311 150 150`	=> infinite
-./philo 4 311 150 162`	=> one death
-./philo 8 800 200 200`	=> infinite
-./philo 2 800 200 200`	=> infinite
-./philo 4 2147483647 200 200`	=> infinite
-./philo 5 800 200 200`	=> infinite (Test that failed last eval)
+./philo 1 800 200 200            	=> One death at 800 ms
+./philo 3 500 200 400            	=> One death at 500 ms
+./philo 4 310 200 100            	=> One death at 310 ms
+./philo 4 214748364732 200 200   	=> Invalid Arg
+./philo 5 -500 200 200           	=> Invalid Arg
+./philo 4 0 200 200             	=> Invalid Arg
+./philo 4 500 200 1.2           	=> Invalid Arg
+./philo 4 410 200 200            	=> Infinite
+./philo 4 200 210 200            	=> One death at 200 ms
+./philo 4 311 150 150            	=> Infinite
+./philo 4 311 150 162            	=> One death
+./philo 8 800 200 200            	=> Infinite
+./philo 2 800 200 200            	=> Infinite
+./philo 4 2147483647 200 200    	=> Infinite
+./philo 5 800 200 200            	=> Infinite (Test that failed last eval)
 
 ./philo 5 800 200 200 5 | grep "is eating" | awk '{count[$2]++} END {for (id in count) print "Philosopher", id, "ate", count[id], "times."}'
